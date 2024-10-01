@@ -28,6 +28,7 @@ public class Product {
 
     private String description;
     private double stars;
-    private String image;
+    private String imageUrl1;
+    private String imageUrl2;
 
 }
