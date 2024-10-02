@@ -30,4 +30,12 @@ public class ProductService {
     public Product createProduct(Product product) {
         return productRepository.save(product);
     }
+
+    public Product getProductById(Long id) {
+        return productRepository.findById(id).orElseThrow();
+    }
+
+    public void deleteById(Long id) {
+        productRepository.deleteById(id);
+    }
 }
