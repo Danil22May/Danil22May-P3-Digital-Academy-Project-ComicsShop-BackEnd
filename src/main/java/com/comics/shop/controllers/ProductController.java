@@ -65,7 +65,6 @@ public class ProductController {
         System.out.println("Received request: category = " + category + ", page = " + page + ", limit = " + limit);
         Category categoryEnum = Category.valueOf(category.toUpperCase());
         return productService.getProductsByCategory(categoryEnum, page, limit);
-
     }
 
 }

@@ -32,5 +32,6 @@ public class Product {
     private double stars;
     private String imageUrl1;
     private String imageUrl2;
+    private int price;
 
 }
