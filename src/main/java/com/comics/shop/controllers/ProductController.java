@@ -29,8 +29,12 @@ public class ProductController {
     public Page<Product> getAllProducts(
             @RequestParam(name = "page", required = true) int page,
             @RequestParam(name = "limit", required = true) int limit) {
-
         return productService.getAllProducts(page, limit);
+    }
+
+    @GetMapping("/product")
+    public Product getProductById(@RequestParam(name = "id", required = true) Long id) {
+        return productService.getProductById(id);
     }
 
     @PostMapping("/product")
