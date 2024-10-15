@@ -7,5 +7,5 @@ import com.comics.shop.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    boolean existsByUsername(String username);
+    boolean existsByName(String username);
 }

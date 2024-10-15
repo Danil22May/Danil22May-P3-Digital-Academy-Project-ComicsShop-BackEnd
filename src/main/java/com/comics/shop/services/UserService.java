@@ -40,7 +40,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public boolean existsByUsername(String username) {
-        return userRepository.existsByUsername(username);
+    public boolean existsByUsername(String name) {
+        return userRepository.existsByName(name);
     }
 }

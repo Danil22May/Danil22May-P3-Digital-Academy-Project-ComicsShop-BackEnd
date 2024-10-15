@@ -1,22 +1,23 @@
 package com.comics.shop.dto;
 
 public class UserDTO {
-    private String username;
+    private String name;
     private String password;
 
-    public UserDTO() {}
+    public UserDTO() {
+    }
 
     public UserDTO(String username, String password) {
-        this.username = username;
+        this.name = username;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String username) {
+        this.name = username;
     }
 
     public String getPassword() {
