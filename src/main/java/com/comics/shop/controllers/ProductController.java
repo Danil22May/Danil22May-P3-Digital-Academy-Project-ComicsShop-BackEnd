@@ -51,7 +51,8 @@ public class ProductController {
         editedProduct.setDescription(product.getDescription());
         editedProduct.setImageUrl1(product.getImageUrl1());
         editedProduct.setImageUrl2(product.getImageUrl2());
-        return editedProduct;
+        editedProduct.setPrice(product.getPrice());
+        return productService.createProduct(editedProduct);
     }
 
     @DeleteMapping("/product")

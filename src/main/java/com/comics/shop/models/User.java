@@ -22,5 +22,6 @@ public class User {
     private Long id;
     private boolean isAdmin;
     private String name;
+    private String password;
 
 }
