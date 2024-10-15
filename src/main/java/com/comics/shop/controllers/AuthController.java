@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.comics.shop.dto.UserDTO;
+import com.comics.shop.models.User;
 import com.comics.shop.services.UserService;
 
 @RestController
@@ -30,6 +31,10 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> authenticate(@RequestBody UserDTO userDTO) {
-
+        User loggedUser = userService.findUserByName(userDTO.getName());
+        if (userService.checkPassword(userDTO.getPassword(), loggedUser.getPassword())) {
+            return ResponseEntity.ok("Logged in");
+        }
+        return ResponseEntity.badRequest().body("Wrong credentials");
     }
 }

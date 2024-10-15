@@ -60,4 +60,8 @@ public class UserService {
         user.setPassword(hashedPassword);
         userRepository.save(user);
     }
+
+    public boolean checkPassword(String rawPassword, String hashedPassword) {
+        return passwordEncoder.matches(rawPassword, hashedPassword);
+    }
 }
