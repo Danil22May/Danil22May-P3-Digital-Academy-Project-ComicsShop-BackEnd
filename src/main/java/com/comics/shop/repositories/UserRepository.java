@@ -8,4 +8,6 @@ import com.comics.shop.models.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     boolean existsByName(String username);
+
+    User findByName(String name);
 }

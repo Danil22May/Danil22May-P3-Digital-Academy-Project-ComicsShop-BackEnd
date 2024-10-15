@@ -11,4 +11,6 @@ import com.comics.shop.models.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
     Page<Product> findByCategory(Category category, Pageable pageable);
+
+    Product findByName(String name);
 }

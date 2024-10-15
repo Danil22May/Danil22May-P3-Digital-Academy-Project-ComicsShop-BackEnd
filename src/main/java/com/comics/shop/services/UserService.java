@@ -49,6 +49,10 @@ public class UserService {
         return userRepository.existsByName(name);
     }
 
+    public User findUserByName(String name) {
+        return userRepository.findByName(name);
+    }
+
     public void registerUser(UserDTO userDto) {
         User user = new User();
         user.setName(userDto.getName());
